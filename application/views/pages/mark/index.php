@@ -22,8 +22,8 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Dosen</th>
-							<th>Mahasiswa</th>
+							<th>Lecturer</th>
+							<th>Student</th>
 							<th>Nilai</th>
 							<?php if ($this->session->userdata('role_id') != 3) { ?>
 								<th>Aksi</th>

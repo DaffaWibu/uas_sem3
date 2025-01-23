@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -17,22 +18,6 @@
 	<!-- Custom styles for this template-->
 	<link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
-	<style>
-		/* Blue theme for sidebar */
-		.bg-purple {
-			background-color: #6f42c1; /* Blue color */
-			background-image: linear-gradient(180deg, #6f42c1 10%, #6f42c1 100%);
-		}
-
-		.sidebar-dark {
-			background-color: #6f42c1; /* Blue background for sidebar */
-		}
-
-		/* Ensure text in sidebar is readable */
-		.sidebar-dark .nav-link {
-			color: white;
-		}
-	</style>
 </head>
 
 <body id="page-top">
@@ -41,14 +26,14 @@
 	<div id="wrapper">
 
 		<!-- Sidebar -->
-		<ul class="navbar-nav bg-purple sidebar sidebar-dark accordion" id="accordionSidebar">
+		<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
 			<!-- Sidebar - Brand -->
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dashboard'); ?>">
 				<div class="sidebar-brand-icon rotate-n-15">
-					<!-- <i class="fas fa-laugh-wink"></i> -->
+					<i class=""></i>
 				</div>
-				<div class="sidebar-brand-text mx-3">Amikom</div>
+				<div class="sidebar-brand-text mx-3">Universitas Amikom</div>
 			</a>
 
 			<!-- Divider -->
@@ -82,8 +67,10 @@
 
 			<!-- Main Content -->
 			<div id="content">
+
 				<!-- Topbar -->
 				<nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
 					<!-- Sidebar Toggle (Topbar) -->
 					<button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
 						<i class="fa fa-bars"></i>
@@ -113,6 +100,7 @@
 						</li>
 
 					</ul>
+
 				</nav>
 				<!-- End of Topbar -->
 

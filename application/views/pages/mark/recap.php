@@ -15,7 +15,7 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Mahasiswa</th>
+							<th>Student</th>
 							<th>Total</th>
 							<th>Aksi</th>
 						</tr>

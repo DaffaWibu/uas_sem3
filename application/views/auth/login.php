@@ -18,75 +18,110 @@
 	<!-- Custom styles for this template-->
 	<link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
-	<!-- Custom CSS -->
 	<style>
-		.bg-purple {
-			background-color: #6f42c1;
-			color: white;
+		body {
+			height: 100vh;
+			background: #0E0B36;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Nunito', sans-serif;
+		}
+
+		.card {
+			background-color: rgb(27, 22, 49);
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 10px 30px rgba(49, 30, 101, 0.2);
+		}
+
+		.card img {
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+			display: block;
+			margin: 0 auto;
+		}
+
+		.btn-primary {
+			background-color: #5A50FF;
+			border: none;
+			transition: background-color 0.3s;
+		}
+
+		.btn-primary:hover {
+			background-color: #17a673;
+		}
+
+		.text-gray-900 {
+			color: #fff !important;
+		}
+
+		h1 {
+			font-weight: 700;
+			color: #fff;
+		}
+
+		.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+			background-color: #1cc88a;
+		}
+
+		.form-control-user {
+			border-radius: 20px;
+			padding: 15px 20px;
+			font-size: 0.9rem;
+		}
+
+		.container {
+			max-width: 900px;
 		}
 	</style>
 
 </head>
 
-<body class="bg-purple">
-
+<body>
 	<div class="container">
-
-		<!-- Outer Row -->
 		<div class="row justify-content-center">
-			<div class="col-xl-10 col-lg-12 col-md-9">
-				<div class="card o-hidden border-0 shadow-lg my-5">
-					<div class="card-body p-0">
-						<!-- Nested Row within Card Body -->
-						<div class="row">
-							<!-- Bagian Logo -->
-							<div class="col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #f8f9fc;">
-								<img src="<?= base_url('assets/img/amikom-removebg.png'); ?>" class="img-fluid" alt="Logo">
-							</div>
-							<!-- Bagian Form -->
-							<div class="col-lg-6">
-								<div class="p-5">
-									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Selamat Datang!</h1>
-										<?= $this->session->flashdata('message'); ?>
+			<div class="col-lg-10">
+				<div class="card o-hidden border-0 shadow-lg">
+					<div class="row">
+						<div class="col-lg-6 d-none d-lg-block d-flex justify-content-center align-items-center">
+							<img src="<?= base_url('assets/img/amikom.png'); ?>" class="img-fluid" alt="Logo Amikom">
+						</div>
+						<div class="col-lg-6">
+							<div class="p-5">
+								<div class="text-center">
+									<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+									<?= $this->session->flashdata('message'); ?>
+								</div>
+								<form class="user" method="POST" action="">
+									<div class="form-group">
+										<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." autocomplete="off" name="email" value="<?= set_value('email'); ?>">
+										<?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
-									<form class="user" method="POST" action="">
-										<div class="form-group">
-											<input type="email" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." autocomplete="off" name="email" value="<?= set_value('email'); ?>">
-											<?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
-										</div>
-										<div class="form-group">
-											<input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password" placeholder="Password" autocomplete="off">
-											<?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
-										</div>
-										<div class="form-group">
-											<div class="custom-control custom-checkbox small">
-												<input type="checkbox" class="custom-control-input" id="customCheck">
-												<label class="custom-control-label" for="customCheck">Remember Me</label>
-											</div>
-										</div>
-										<button type="submit" class="btn btn-primary btn-user btn-block">
-											Login
-										</button>
-									</form>
-									<hr>
-									<div class="text-center">
-										<a class="small" href="<?= base_url('register'); ?>">Create an Account!</a>
+									<div class="form-group">
+										<input type="password" class="form-control form-control-user" id="exampleInputPassword" name="password" placeholder="Password" autocomplete="off">
+										<?= form_error('password', '<small class="text-danger pl-3">', '</small>'); ?>
 									</div>
+									<div class="form-group">
+										<div class="custom-control custom-checkbox small">
+											<input type="checkbox" class="custom-control-input" id="customCheck">
+											<label class="custom-control-label" for="customCheck" style="color: #fff;">Remember Me</label>
+										</div>
+									</div>
+									<button type="submit" class="btn btn-primary btn-user btn-block">
+										Login
+									</button>
+								</form>
+								<hr>
+								<div class="text-center">
+									<a class="small" href="<?= base_url('register'); ?>" style="color: #5A50FF;">Create an Account!</a>
 								</div>
 							</div>
-							<!-- Akhir Bagian Form -->
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
-
-	</div>
-
-	</div>
-
 	</div>
 
 	<!-- Bootstrap core JavaScript-->
@@ -98,7 +133,6 @@
 
 	<!-- Custom scripts for all pages-->
 	<script src="<?= base_url('assets/'); ?>js/sb-admin-2.min.js"></script>
-
 </body>
 
 </html>

@@ -19,25 +19,68 @@
 	<link href="<?= base_url('assets/'); ?>css/sb-admin-2.min.css" rel="stylesheet">
 
 	<style>
-		.bg-purple {
-			background-color: #6f42c1;
-			color: white;
+		body {
+			height: 100vh;
+			background: #0E0B36;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			font-family: 'Nunito', sans-serif;
+		}
+
+		.card {
+			background-color: rgb(27, 22, 49);
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 10px 30px rgba(49, 30, 101, 0.2);
+		}
+
+		.card img {
+			border-top-left-radius: 15px;
+			border-bottom-left-radius: 15px;
+		}
+
+		.btn-primary {
+			background-color: #5A50FF;
+			border: none;
+			transition: background-color 0.3s;
+		}
+
+		.btn-primary:hover {
+			background-color: #17a673;
+		}
+
+		.text-gray-900 {
+			color: #fff !important;
+		}
+
+		h1 {
+			font-weight: 700;
+			color: #fff;
+		}
+
+		.form-control-user {
+			border-radius: 20px;
+			padding: 15px 20px;
+			font-size: 0.9rem;
+		}
+
+		.container {
+			max-width: 900px;
 		}
 	</style>
 
 </head>
 
-<body class="bg-purple">
-
+<body>
 	<div class="container">
-
 		<div class="card o-hidden border-0 shadow-lg my-5">
 			<div class="card-body p-0">
 				<!-- Nested Row within Card Body -->
 				<div class="row">
-				<div class="col-lg-6 d-flex justify-content-center align-items-center" style="background-color: #f8f9fc;">
-								<img src="<?= base_url('assets/img/amikom-removebg.png'); ?>" class="img-fluid" alt="Logo">
-							</div>
+					<div class="col-lg-6 d-flex justify-content-center align-items-center">
+						<img src="<?= base_url('assets/img/amikom.png'); ?>" class="img-fluid" alt="Logo Amikom">
+					</div>
 					<div class="col-lg-6">
 						<div class="p-5">
 							<div class="text-center">
@@ -66,18 +109,14 @@
 								</button>
 							</form>
 							<hr>
-							<!-- <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
-                            </div> -->
 							<div class="text-center">
-								<a class="small" href="<?= base_url('login'); ?>">Already have an account? Login!</a>
+								<a class="small" href="<?= base_url('login'); ?>" style="color: #5A50FF;">Already have an account? Login!</a>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-
 	</div>
 
 	<!-- Bootstrap core JavaScript-->

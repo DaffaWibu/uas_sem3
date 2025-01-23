@@ -15,9 +15,9 @@
 					<thead>
 						<tr>
 							<th>No</th>
-							<th>Mahasiswa</th>
-							<th>Dosen</th>
-							<th>Mata Kuliah</th>
+							<th>Student</th>
+							<th>Lecturer</th>
+							<th>Course Name</th>
 							<th>Nilai</th>
 							<th>Grade</th>
 						</tr>
